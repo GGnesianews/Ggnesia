@@ -88,18 +88,31 @@ function fetchRSS(url) {
 ================================ */
 
 function cleanHTML(text) {
-
     if (!text) return "";
 
-    return text
+    return String(text)
+        // Hapus CDATA
+        .replace(/<!\[CDATA\[/gi, "")
+        .replace(/\]\]>/gi, "")
+
+        // Hapus tag HTML
         .replace(/<[^>]*>/g, " ")
-        .replace(/&nbsp;/gi, " ")
+
+        // HTML entities
         .replace(/&amp;/gi, "&")
         .replace(/&quot;/gi, '"')
+        .replace(/&#039;/gi, "'")
         .replace(/&#39;/gi, "'")
+        .replace(/&apos;/gi, "'")
+        .replace(/&lt;/gi, "<")
+        .replace(/&gt;/gi, ">")
+        .replace(/&#038;/gi, "&")
+        .replace(/&#38;/gi, "&")
+        .replace(/&nbsp;/gi, " ")
+
+        // Rapikan spasi
         .replace(/\s+/g, " ")
         .trim();
-
 }
 
 
