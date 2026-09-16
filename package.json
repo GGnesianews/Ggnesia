@@ -1,0 +1,10 @@
+{
+  "name": "ggnesia-news",
+  "version": "1.0.0",
+  "description": "Automatic gaming news aggregator for GGNesia News",
+  "main": "fetch-news.js",
+  "scripts": {
+    "update-news": "node fetch-news.js"
+  },
+  "license": "MIT"
+}
