@@ -289,13 +289,14 @@ function createNewsCard(article) {
             target="_blank"
             rel="noopener noreferrer"
         >
-
-            <img
-                class="news-image"
-                src="${image}"
-                alt="${escapeHTML(title)}"
-                loading="lazy"
-            >
+<img
+    class="news-image"
+    src="${image}"
+    alt="${escapeHTML(title)}"
+    loading="lazy"
+    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80';"
+>
+            
 
             <div class="news-body">
 
