@@ -222,55 +222,55 @@ function parseRSS(xml, source) {
 
 function extractImage(item) {
 
-    /*
-       Media enclosure
-    */
+    if (!item) return "";
 
-    const enclosure =
-        item.match(
-            /<enclosure[^>]+url=["']([^"']+)["']/i
-        );
-
+    // 1. enclosure
+    const enclosure = item.match(
+        /<enclosure[^>]+url=["']([^"']+)["']/i
+    );
 
     if (enclosure) {
         return enclosure[1];
     }
 
-
-    /*
-       media:content
-    */
-
-    const media =
-        item.match(
-            /<media:content[^>]+url=["']([^"']+)["']/i
-        );
-
+    // 2. media:content
+    const media = item.match(
+        /<media:content[^>]+url=["']([^"']+)["']/i
+    );
 
     if (media) {
         return media[1];
     }
 
+    // 3. media:thumbnail
+    const thumbnail = item.match(
+        /<media:thumbnail[^>]+url=["']([^"']+)["']/i
+    );
 
-    /*
-       Cari gambar pertama dari description
-    */
+    if (thumbnail) {
+        return thumbnail[1];
+    }
 
-    const image =
-        item.match(
-            /<img[^>]+src=["']([^"']+)["']/i
-        );
-
+    // 4. image di description/content
+    const image = item.match(
+        /<img[^>]+src=["']([^"']+)["']/i
+    );
 
     if (image) {
         return image[1];
     }
 
+    // 5. og:image jika ada
+    const ogImage = item.match(
+        /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i
+    );
+
+    if (ogImage) {
+        return ogImage[1];
+    }
 
     return "";
-
 }
-
 
 /* ================================
    FORMAT WAKTU
