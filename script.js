@@ -620,18 +620,22 @@ function showNewsError() {
 ================================= */
 
 function escapeHTML(text) {
+    if (text === null || text === undefined) {
+        return "";
+    }
 
-    return String(text)
+    const textarea = document.createElement("textarea");
+    textarea.innerHTML = String(text);
 
+    return textarea.value
+        .replace(/<!\[CDATA\[/gi, "")
+        .replace(/\]\]>/gi, "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
-
 }
-
-
 /* =================================
    MULAI WEBSITE
 ================================= */
