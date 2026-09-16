@@ -240,10 +240,11 @@ function displayNews(news) {
 ================================= */
 
 function createNewsCard(article) {
+
     const card = document.createElement("article");
     card.className = "news-card";
 
-    // Bersihkan HTML entity seperti &#039;
+    // Bersihkan HTML / entity
     function decodeHTML(text) {
         const textarea = document.createElement("textarea");
         textarea.innerHTML = text || "";
@@ -255,7 +256,8 @@ function createNewsCard(article) {
     );
 
     const description = decodeHTML(
-        article.description || "Informasi gaming terbaru untuk pembaca GGNesia News."
+        article.description ||
+        "Informasi gaming terbaru untuk pembaca GGNesia News."
     );
 
     // Rapikan kategori
@@ -269,13 +271,43 @@ function createNewsCard(article) {
     const time = article.time || "Terbaru";
     const url = article.url || "#";
 
-    // Gambar asli dari sumber berita
-    const originalImage = article.image || "";
+    // Gambar asli
+    const image = article.image || "";
 
-    // Proxy gambar agar gambar dari website lain lebih mudah tampil
-    const image = originalImage
-        ? `https://wsrv.nl/?url=${encodeURIComponent(originalImage)}`
-        : "";
+    // Gambar fallback jika gambar gagal
+    const fallbackImage =
+        "data:image/svg+xml;charset=UTF-8," +
+        encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="800"
+                 height="450"
+                 viewBox="0 0 800 450">
+
+                <rect width="800"
+                      height="450"
+                      fill="#111827"/>
+
+                <text x="400"
+                      y="215"
+                      text-anchor="middle"
+                      fill="#22d3ee"
+                      font-size="32"
+                      font-family="Arial"
+                      font-weight="bold">
+                    GGNesia
+                </text>
+
+                <text x="400"
+                      y="255"
+                      text-anchor="middle"
+                      fill="#94a3b8"
+                      font-size="18"
+                      font-family="Arial">
+                    Gaming News
+                </text>
+
+            </svg>
+        `);
 
     card.innerHTML = `
         <a
@@ -286,24 +318,10 @@ function createNewsCard(article) {
 
             <img
                 class="news-image"
-                src="${image}"
+                src="${escapeHTML(image)}"
                 alt="${escapeHTML(title)}"
                 loading="lazy"
-                onerror="this.onerror=null; this.src='data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
-                    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="450">
-                        <rect width="100%" height="100%" fill="#151c2e"/>
-                        <text x="50%" y="48%" text-anchor="middle"
-                              fill="#19c7e8" font-size="28"
-                              font-family="Arial">
-                            GGNesia
-                        </text>
-                        <text x="50%" y="58%" text-anchor="middle"
-                              fill="#8d98ad" font-size="18"
-                              font-family="Arial">
-                            Gaming News
-                        </text>
-                    </svg>
-                `)}'"
+                onerror="this.onerror=null; this.src='${fallbackImage}'"
             >
 
             <div class="news-body">
