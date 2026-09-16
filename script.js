@@ -260,17 +260,83 @@ function createNewsCard(article) {
         "Informasi gaming terbaru untuk pembaca GGNesia News."
     );
 
-    // Rapikan kategori
-    let category = article.category || "Game News";
+    // Tentukan kategori berita secara otomatis
+const rawText = (
+    (article.title || "") + " " +
+    (article.description || "") + " " +
+    (article.source || "")
+).toLowerCase();
 
-    if (category.toLowerCase() === "gaming") {
-        category = "Game News";
-    }
+let category = article.category || "Game News";
 
-    const source = article.source || "GGNesia News";
-    const time = article.time || "Terbaru";
-    const url = article.url || "#";
+// Esports khusus
+if (
+    rawText.includes("mobile legends") ||
+    rawText.includes("mlbb") ||
+    rawText.includes("pubg mobile") ||
+    rawText.includes("free fire") ||
+    rawText.includes("valorant champions") ||
+    rawText.includes("valorant esports") ||
+    rawText.includes("tournament") ||
+    rawText.includes("turnamen") ||
+    rawText.includes("esports") ||
+    rawText.includes("esport") ||
+    rawText.includes("team liquid") ||
+    rawText.includes("team rrq") ||
+    rawText.includes("evos") ||
+    rawText.includes("mpl")
+) {
+    category = "Esports";
+}
 
+// PC Gaming
+else if (
+    rawText.includes("pc gaming") ||
+    rawText.includes("steam") ||
+    rawText.includes("steam deck") ||
+    rawText.includes("gpu") ||
+    rawText.includes("rtx") ||
+    rawText.includes("playstation pc")
+) {
+    category = "PC Gaming";
+}
+
+// Console
+else if (
+    rawText.includes("nintendo switch") ||
+    rawText.includes("switch 2") ||
+    rawText.includes("playstation") ||
+    rawText.includes("ps5") ||
+    rawText.includes("xbox")
+) {
+    category = "Console";
+}
+
+// Mobile Gaming
+else if (
+    rawText.includes("android") ||
+    rawText.includes("ios") ||
+    rawText.includes("iphone") ||
+    rawText.includes("mobile game")
+) {
+    category = "Mobile Gaming";
+}
+
+// Update Game
+else if (
+    rawText.includes("update") ||
+    rawText.includes("patch") ||
+    rawText.includes("season") ||
+    rawText.includes("dlc")
+) {
+    category = "Update Game";
+}
+
+// Selain itu = Game News
+else {
+    category = "Game News";
+}
+    
     // Gambar asli
     const image = article.image || "";
 
