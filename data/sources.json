@@ -1,0 +1,62 @@
+[
+  {
+    "name": "IGN",
+    "category": "Gaming",
+    "feed": "https://feeds.ign.com/ign/all"
+  },
+  {
+    "name": "GameSpot",
+    "category": "Gaming",
+    "feed": "https://www.gamespot.com/feeds/mashup/"
+  },
+  {
+    "name": "Eurogamer",
+    "category": "Gaming",
+    "feed": "https://www.eurogamer.net/feed"
+  },
+  {
+    "name": "Polygon",
+    "category": "Gaming",
+    "feed": "https://www.polygon.com/rss/index.xml"
+  },
+  {
+    "name": "PC Gamer",
+    "category": "PC Gaming",
+    "feed": "https://www.pcgamer.com/rss/"
+  },
+  {
+    "name": "Game Developer",
+    "category": "Industry",
+    "feed": "https://www.gamedeveloper.com/rss.xml"
+  },
+  {
+    "name": "Nintendo Life",
+    "category": "Nintendo",
+    "feed": "https://www.nintendolife.com/feeds/latest"
+  },
+  {
+    "name": "Rock Paper Shotgun",
+    "category": "PC Gaming",
+    "feed": "https://www.rockpapershotgun.com/feed"
+  },
+  {
+    "name": "ONE Esports",
+    "category": "Esports",
+    "feed": "https://www.oneesports.gg/feed/"
+  },
+  {
+    "name": "Esports Insider",
+    "category": "Esports",
+    "feed": "https://esportsinsider.com/feed"
+  },
+  {
+    "name": "Esports.net",
+    "category": "Esports",
+    "feed": "https://www.esports.net/feed/"
+  },
+  {
+    "name": "Dot Esports",
+    "category": "Esports",
+    "feed": "https://dotesports.com/feed"
+  }
+]
