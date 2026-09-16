@@ -624,17 +624,33 @@ function escapeHTML(text) {
         return "";
     }
 
-    const textarea = document.createElement("textarea");
-    textarea.innerHTML = String(text);
+    let value = String(text);
 
-    return textarea.value
+    // Bersihkan CDATA
+    value = value
         .replace(/<!\[CDATA\[/gi, "")
-        .replace(/\]\]>/gi, "")
+        .replace(/\]\]>/gi, "");
+
+    // Decode HTML entity yang mungkin berlapis
+    const textarea = document.createElement("textarea");
+
+    for (let i = 0; i < 3; i++) {
+        textarea.innerHTML = value;
+        const decoded = textarea.value;
+
+        if (decoded === value) {
+            break;
+        }
+
+        value = decoded;
+    }
+
+    // Escape kembali agar aman dimasukkan ke HTML
+    return value
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+        .replace(/"/g, "&quot;");
 }
 /* =================================
    MULAI WEBSITE
