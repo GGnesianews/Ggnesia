@@ -1,0 +1,332 @@
+/* ================================
+   GGNESIA NEWS
+   Main Style
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #080c18;
+    --surface: #11182a;
+    --surface-2: #182238;
+    --border: #26324d;
+
+    --primary: #6c63ff;
+    --secondary: #00d9ff;
+
+    --text: #f5f7ff;
+    --muted: #9da8bd;
+
+    --radius: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    height: 76px;
+    width: 100%;
+    background: rgba(8, 12, 24, 0.96);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* MENU BUTTON */
+
+.menu-button,
+.search-button {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: var(--surface);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.menu-button:hover,
+.search-button:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -1px;
+
+    color: white;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.logo-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 34px;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: var(--primary);
+}
+
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+.mobile-menu {
+    position: fixed;
+
+    top: 0;
+    left: -330px;
+
+    width: 310px;
+    height: 100vh;
+
+    background: #10182b;
+
+    z-index: 2000;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    transition: left 0.3s ease;
+
+    border-right: 1px solid var(--border);
+}
+
+.mobile-menu.open {
+    left: 0;
+}
+
+.menu-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.menu-header strong {
+    font-size: 22px;
+}
+
+.menu-header strong::first-letter {
+    color: var(--secondary);
+}
+
+.menu-header button {
+    border: 0;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* MENU LINKS */
+
+.mobile-menu > a,
+.menu-dropdown {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 4px;
+
+    background: none;
+
+    border: 0;
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.mobile-menu > a:hover,
+.menu-dropdown:hover {
+    color: var(--secondary);
+}
+
+
+/* SUBMENU */
+
+.menu-section {
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.submenu {
+    display: none;
+
+    background: #182238;
+
+    border-radius: 14px;
+
+    padding: 8px;
+
+    margin-bottom: 10px;
+}
+
+.menu-section.active .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+
+    padding: 12px 14px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    border-radius: 9px;
+}
+
+.submenu a:hover {
+    color: white;
+    background: #222e49;
+}
+
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    z-index: 1500;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.25s;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-box {
+    position: fixed;
+
+    top: 76px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    background: #10182b;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    gap: 10px;
+
+    transform: translateY(-120%);
+
+    transition: 0.3s;
+
+    z-index: 900;
+}
+
+.search-box.active {
+    transform: translateY(0);
+}
+
+.search-box input {
+    flex: 1;
+
+   
