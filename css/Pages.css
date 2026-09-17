@@ -1,1 +1,145 @@
+/* =================================
+   GGNESIA - PAGES CSS
+   ================================= */
 
+.page-content {
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+
+/* PAGE HEADING */
+
+.page-heading {
+    margin-bottom: 22px;
+}
+
+.page-heading h1 {
+    font-size: 30px;
+    margin: 5px 0 8px;
+}
+
+.page-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* CATEGORY FILTER */
+
+.category-filter {
+    display: flex;
+    gap: 9px;
+
+    overflow-x: auto;
+
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+}
+
+.category-filter button {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--card);
+    color: #cfd4dd;
+
+    padding: 9px 15px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.category-filter button:hover {
+    border-color: var(--accent);
+    color: white;
+}
+
+.category-filter .filter-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+
+
+/* NEWS LIST */
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* NEWS CARD */
+
+.news-list .news-card {
+    width: 100%;
+}
+
+.news-list .news-content h2 {
+    font-size: 18px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.news-list .news-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+
+    .page-content {
+        padding-top: 40px;
+    }
+
+    .page-heading h1 {
+        font-size: 38px;
+    }
+
+    .news-list {
+        gap: 18px;
+    }
+
+    .news-list .news-card {
+        min-height: 180px;
+    }
+
+    .news-list .news-image {
+        width: 220px;
+        min-width: 220px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .page-heading h1 {
+        font-size: 26px;
+    }
+
+    .news-list .news-content h2 {
+        font-size: 15px;
+    }
+
+    .news-list .news-content p {
+        display: none;
+    }
+
+    .news-list .news-image {
+        width: 110px;
+        min-width: 110px;
+    }
+
+}
