@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Update Terbaru Mobile Legends Hadir dengan Berbagai Perubahan",
+    "category": "Mobile Legends",
+    "type": "game",
+    "image": "",
+    "summary": "Informasi terbaru mengenai update dan perubahan dalam Mobile Legends.",
+    "source": "GGNesia",
+    "url": "#",
+    "publishedAt": "2026-09-17T08:00:00+07:00"
+  },
+  {
+    "id": 2,
+    "title": "PUBG Mobile Menghadirkan Event Baru untuk Para Pemain",
+    "category": "PUBG Mobile",
+    "type": "game",
+    "image": "",
+    "summary": "Event terbaru PUBG Mobile membawa berbagai konten baru.",
+    "source": "GGNesia",
+    "url": "#",
+    "publishedAt": "2026-09-17T07:00:00+07:00"
+  },
+  {
+    "id": 3,
+    "title": "Turnamen Esports Terbaru Mulai Memasuki Babak Berikutnya",
+    "category": "Esports",
+    "type": "esports",
+    "image": "",
+    "summary": "Kompetisi esports terbaru mulai memasuki pertandingan penting.",
+    "source": "GGNesia",
+    "url": "#",
+    "publishedAt": "2026-09-17T06:00:00+07:00"
+  }
+]
