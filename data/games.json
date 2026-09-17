@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Mobile Legends",
+    "slug": "mobile-legends",
+    "category": "Mobile"
+  },
+  {
+    "id": 2,
+    "name": "PUBG Mobile",
+    "slug": "pubg-mobile",
+    "category": "Mobile"
+  },
+  {
+    "id": 3,
+    "name": "Free Fire",
+    "slug": "free-fire",
+    "category": "Mobile"
+  },
+  {
+    "id": 4,
+    "name": "Valorant",
+    "slug": "valorant",
+    "category": "PC"
+  },
+  {
+    "id": 5,
+    "name": "Dota 2",
+    "slug": "dota-2",
+    "category": "PC"
+  },
+  {
+    "id": 6,
+    "name": "Genshin Impact",
+    "slug": "genshin-impact",
+    "category": "Multi Platform"
+  }
+]
