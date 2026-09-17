@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "game": "Mobile Legends",
+    "tournament": "Turnamen Mobile Legends",
+    "status": "Upcoming",
+    "date": "2026-09-20",
+    "teams": []
+  },
+  {
+    "id": 2,
+    "game": "PUBG Mobile",
+    "tournament": "PUBG Mobile Championship",
+    "status": "Upcoming",
+    "date": "2026-09-22",
+    "teams": []
+  },
+  {
+    "id": 3,
+    "game": "Free Fire",
+    "tournament": "Free Fire Esports",
+    "status": "Upcoming",
+    "date": "2026-09-25",
+    "teams": []
+  },
+  {
+    "id": 4,
+    "game": "Valorant",
+    "tournament": "Valorant Championship",
+    "status": "Upcoming",
+    "date": "2026-09-28",
+    "teams": []
+  }
+]
