@@ -1,184 +1,323 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>GGNesia - Portal Berita Gaming Indonesia</title>
+    <title>GGNesia - Berita Gaming Indonesia</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-inner">
+    <!-- HEADER -->
+    <header class="header">
+        <button class="menu-btn">☰</button>
 
-      <button class="menu-btn" id="menuBtn">
-        ☰
-      </button>
-
-      <a href="index.html" class="logo">
-        GG<span>NESIA</span>
-      </a>
-
-      <nav class="desktop-nav">
-        <a href="index.html">Home</a>
-        <a href="berita.html">Berita</a>
-        <a href="esports.html">Esports</a>
-        <a href="games.html">Games</a>
-        <a href="#">Industri</a>
-      </nav>
-
-      <button class="search-btn" id="searchBtn">
-        🔍
-      </button>
-
-    </div>
-  </header>
-
-
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-
-    <a href="index.html">Home</a>
-    <a href="berita.html">Berita</a>
-    <a href="esports.html">Esports</a>
-    <a href="games.html">Games</a>
-    <a href="#">Industri</a>
-
-  </div>
-
-
-  <!-- MAIN -->
-  <main>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-
-        <div class="section-title">
-          <span></span>
-          <h2>Berita Terbaru</h2>
+        <div class="logo">
+            GG<span>Nesia</span>
         </div>
 
-        <div class="hero-news">
+        <button class="search-btn">⌕</button>
+    </header>
 
-          <article class="hero-card">
-            <div class="news-image">
-              GAMING NEWS
+
+    <!-- NAVIGASI -->
+    <nav class="navigation">
+        <a href="#">Berita</a>
+        <a href="#">Esports</a>
+        <a href="#">Games</a>
+        <a href="#">Trending</a>
+    </nav>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="container">
+
+        <!-- BERITA UTAMA -->
+        <section class="featured">
+
+            <div class="featured-image">
+                GAMING NEWS
             </div>
 
-            <div class="news-content">
-              <span class="category">GAME</span>
+            <div class="featured-content">
 
-              <h1>
-                Berita gaming terbaru akan tampil di sini
-              </h1>
+                <span class="category">
+                    BERITA UTAMA
+                </span>
 
-              <p>
-                Ikuti perkembangan game, esports, update terbaru,
-                dan berbagai informasi gaming lainnya bersama GGNesia.
-              </p>
+                <h1>
+                    Berita Gaming Terbaru Hari Ini
+                </h1>
 
-              <small>Baru saja</small>
+                <p>
+                    Informasi terbaru seputar game,
+                    esports, update dan industri gaming.
+                </p>
+
+                <small>
+                    2 jam yang lalu
+                </small>
+
             </div>
-          </article>
+
+        </section>
+
+
+        <!-- TRENDING -->
+        <section class="section">
+
+            <div class="section-header">
+                <h2>🔥 Trending</h2>
+                <a href="#">Lihat semua</a>
+            </div>
+
+
+            <div class="trending-grid">
+
+                <article class="trend-card">
+
+                    <div class="trend-image">
+                        IMAGE
+                    </div>
+
+                    <span class="category">
+                        ESPORTS
+                    </span>
+
+                    <h3>
+                        Turnamen esports terbaru
+                        mulai berlangsung
+                    </h3>
+
+                    <small>
+                        3 jam yang lalu
+                    </small>
+
+                </article>
+
+
+                <article class="trend-card">
+
+                    <div class="trend-image">
+                        IMAGE
+                    </div>
+
+                    <span class="category">
+                        UPDATE
+                    </span>
+
+                    <h3>
+                        Update game terbaru
+                        hadir hari ini
+                    </h3>
+
+                    <small>
+                        5 jam yang lalu
+                    </small>
+
+                </article>
+
+
+                <article class="trend-card">
+
+                    <div class="trend-image">
+                        IMAGE
+                    </div>
+
+                    <span class="category">
+                        GAME
+                    </span>
+
+                    <h3>
+                        Game baru yang sedang
+                        ramai dimainkan
+                    </h3>
+
+                    <small>
+                        6 jam yang lalu
+                    </small>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MOBILE LEGENDS -->
+        <section class="game-section">
+
+            <div class="section-header">
+                <h2>Mobile Legends</h2>
+                <a href="#">Lihat semua</a>
+            </div>
+
+
+            <article class="news-card">
+
+                <div class="news-content">
+
+                    <span class="category">
+                        MOBILE LEGENDS
+                    </span>
+
+                    <h3>
+                        Mobile Legends menghadirkan
+                        update terbaru
+                    </h3>
+
+                    <small>
+                        GGNesia • 2 jam yang lalu
+                    </small>
+
+                </div>
+
+                <div class="news-image">
+                    IMAGE
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- PUBG MOBILE -->
+        <section class="game-section">
+
+            <div class="section-header">
+                <h2>PUBG Mobile</h2>
+                <a href="#">Lihat semua</a>
+            </div>
+
+
+            <article class="news-card">
+
+                <div class="news-content">
+
+                    <span class="category">
+                        PUBG MOBILE
+                    </span>
+
+                    <h3>
+                        PUBG Mobile menghadirkan
+                        event terbaru
+                    </h3>
+
+                    <small>
+                        GGNesia • 4 jam yang lalu
+                    </small>
+
+                </div>
+
+                <div class="news-image">
+                    IMAGE
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- FREE FIRE -->
+        <section class="game-section">
+
+            <div class="section-header">
+                <h2>Free Fire</h2>
+                <a href="#">Lihat semua</a>
+            </div>
+
+
+            <article class="news-card">
+
+                <div class="news-content">
+
+                    <span class="category">
+                        FREE FIRE
+                    </span>
+
+                    <h3>
+                        Free Fire menyiapkan
+                        update besar berikutnya
+                    </h3>
+
+                    <small>
+                        GGNesia • 5 jam yang lalu
+                    </small>
+
+                </div>
+
+                <div class="news-image">
+                    IMAGE
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- DOTA 2 -->
+        <section class="game-section">
+
+            <div class="section-header">
+                <h2>Dota 2</h2>
+                <a href="#">Lihat semua</a>
+            </div>
+
+
+            <article class="news-card">
+
+                <div class="news-content">
+
+                    <span class="category">
+                        DOTA 2
+                    </span>
+
+                    <h3>
+                        Kompetisi Dota 2 terbaru
+                        memasuki babak berikutnya
+                    </h3>
+
+                    <small>
+                        GGNesia • 6 jam yang lalu
+                    </small>
+
+                </div>
+
+                <div class="news-image">
+                    IMAGE
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <h2>GGNesia</h2>
+
+            <p>
+                Portal berita gaming dan esports Indonesia.
+            </p>
+
+            <small>
+                © 2026 GGNesia
+            </small>
 
         </div>
 
-      </div>
-    </section>
+    </footer>
 
 
-    <!-- BERITA TERBARU -->
-    <section class="latest">
-      <div class="container">
-
-        <div class="section-title">
-          <span></span>
-          <h2>Berita Terbaru</h2>
-        </div>
-
-        <div id="latestNews" class="news-grid">
-
-          <!-- Berita otomatis akan dimasukkan JavaScript -->
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ESPORTS -->
-    <section class="esports-section">
-      <div class="container">
-
-        <div class="section-title">
-          <span></span>
-          <h2>Esports</h2>
-        </div>
-
-        <div class="game-filter">
-
-          <button class="active">Semua</button>
-          <button>Mobile Legends</button>
-          <button>PUBG Mobile</button>
-          <button>Free Fire</button>
-          <button>Valorant</button>
-          <button>Honor of Kings</button>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- GAME -->
-    <section class="games-section">
-      <div class="container">
-
-        <div class="section-title">
-          <span></span>
-          <h2>Berita Game</h2>
-        </div>
-
-        <div id="gameNews" class="news-grid">
-
-          <!-- Berita game akan muncul di sini -->
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <div class="container">
-
-      <div class="footer-logo">
-        GG<span>NESIA</span>
-      </div>
-
-      <p>
-        Portal Dunia Game & Esports Indonesia
-      </p>
-
-      <p class="copyright">
-        © 2026 GGNesia. All rights reserved.
-      </p>
-
-    </div>
-
-  </footer>
-
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
