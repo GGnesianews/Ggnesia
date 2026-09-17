@@ -1,0 +1,473 @@
+/* ================================
+   GGNESIA - STYLE CSS
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #080b12;
+    --bg-soft: #10151f;
+    --card: #141a25;
+    --card-hover: #1a2230;
+    --text: #ffffff;
+    --muted: #929aaa;
+    --accent: #ff3b4f;
+    --accent-dark: #d92338;
+    --border: #252c39;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+.header {
+    height: 64px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #0b0f17;
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.menu-btn,
+.search-btn {
+    width: 40px;
+    height: 40px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: var(--card);
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-btn:hover,
+.search-btn:hover {
+    background: var(--card-hover);
+}
+
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+.navigation {
+    display: flex;
+    gap: 24px;
+
+    padding: 13px 18px;
+
+    background: #0d121b;
+    border-bottom: 1px solid var(--border);
+
+    overflow-x: auto;
+}
+
+.navigation a {
+    color: #cdd2dc;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.navigation a:hover {
+    color: var(--accent);
+}
+
+
+/* ================================
+   CONTAINER
+   ================================ */
+
+.container {
+    width: min(1180px, calc(100% - 30px));
+    margin: auto;
+}
+
+
+/* ================================
+   FEATURED NEWS
+   ================================ */
+
+.featured {
+    margin-top: 24px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+.featured-image {
+    height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d2635,
+            #0b1019
+        );
+
+    color: #697386;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.featured-content {
+    padding: 20px;
+}
+
+.category {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .8px;
+}
+
+.featured h1 {
+    font-size: 27px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.featured p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* ================================
+   SECTION
+   ================================ */
+
+.section,
+.game-section {
+    margin-top: 35px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 21px;
+}
+
+.section-header a {
+    color: var(--accent);
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* ================================
+   TRENDING
+   ================================ */
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.trend-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition: .2s;
+}
+
+.trend-card:hover {
+    transform: translateY(-3px);
+    background: var(--card-hover);
+}
+
+.trend-image {
+    height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1a202c;
+
+    color: #626b7c;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.trend-card .category,
+.trend-card h3,
+.trend-card small {
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.trend-card .category {
+    margin-top: 13px;
+}
+
+.trend-card h3 {
+    font-size: 15px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   NEWS CARD
+   ================================ */
+
+.news-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    min-height: 150px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition: .2s;
+}
+
+.news-card:hover {
+    background: var(--card-hover);
+}
+
+.news-content {
+    flex: 1;
+    padding: 17px;
+}
+
+.news-content h3 {
+    font-size: 17px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.news-image {
+    width: 145px;
+    min-width: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1a202c;
+
+    color: #626b7c;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+.footer {
+    margin-top: 50px;
+    padding: 35px 0;
+
+    background: #0b0f17;
+    border-top: 1px solid var(--border);
+}
+
+.footer h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.footer p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   DESKTOP
+   ================================ */
+
+@media (min-width: 768px) {
+
+    .header {
+        padding: 0 30px;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+
+    .featured {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .featured-image {
+        height: 100%;
+        min-height: 350px;
+    }
+
+    .featured-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 35px;
+    }
+
+    .featured h1 {
+        font-size: 34px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .featured {
+        margin-top: 18px;
+        border-radius: 13px;
+    }
+
+    .featured-image {
+        height: 190px;
+    }
+
+    .featured-content {
+        padding: 16px;
+    }
+
+    .featured h1 {
+        font-size: 23px;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .trend-image {
+        height: 110px;
+    }
+
+    .trend-card h3 {
+        font-size: 14px;
+    }
+
+    .news-card {
+        min-height: 125px;
+    }
+
+    .news-content {
+        padding: 13px;
+    }
+
+    .news-content h3 {
+        font-size: 14px;
+    }
+
+    .news-image {
+        width: 105px;
+        min-width: 105px;
+    }
+}
+
+
+/* ================================
+   SMALL PHONE
+   ================================ */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .trending-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trend-image {
+        height: 150px;
+    }
+
+    .news-image {
+        width: 95px;
+        min-width: 95px;
+    }
+}
