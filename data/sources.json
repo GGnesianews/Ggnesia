@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Sumber Gaming 1",
+    "type": "rss",
+    "url": "",
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Sumber Gaming 2",
+    "type": "rss",
+    "url": "",
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Sumber Gaming 3",
+    "type": "api",
+    "url": "",
+    "active": false
+  }
+]
