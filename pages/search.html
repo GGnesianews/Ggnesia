@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pencarian - GGNesia</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <button class="menu-btn">☰</button>
+
+        <a href="../index.html" class="logo">
+            GG<span>Nesia</span>
+        </a>
+
+        <button class="search-btn">⌕</button>
+
+    </header>
+
+
+    <!-- NAVIGASI -->
+    <nav class="navigation">
+        <a href="../index.html">Home</a>
+        <a href="news.html">Berita</a>
+        <a href="esports.html">Esports</a>
+        <a href="games.html">Games</a>
+        <a href="trending.html">Trending</a>
+    </nav>
+
+
+    <!-- KONTEN -->
+    <main class="container page-content">
+
+        <div class="page-heading">
+
+            <span class="category">
+                GGNESIA SEARCH
+            </span>
+
+            <h1>Cari Berita</h1>
+
+            <p>
+                Temukan berita game dan esports
+                yang kamu cari.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH BOX -->
+        <form class="search-form">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Cari berita, game, esports..."
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                Cari
+            </button>
+
+        </form>
+
+
+        <!-- HASIL PENCARIAN -->
+        <section class="search-results">
+
+            <div class="section-header">
+                <h2>Hasil Pencarian</h2>
+            </div>
+
+            <div id="searchResults">
+
+                <div class="empty-search">
+
+                    <div class="empty-icon">
+                        🔍
+                    </div>
+
+                    <h3>
+                        Belum ada pencarian
+                    </h3>
+
+                    <p>
+                        Masukkan kata kunci untuk
+                        mencari berita gaming.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <h2>GGNesia</h2>
+
+            <p>
+                Portal berita gaming dan esports Indonesia.
+            </p>
+
+            <small>
+                © 2026 GGNesia
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+    <script src="../js/search.js"></script>
+
+</body>
+</html>
