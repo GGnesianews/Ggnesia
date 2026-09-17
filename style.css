@@ -547,3 +547,93 @@ small {
 .menu-category:hover {
     color: var(--accent);
 }
+/* =================================
+   SIDE MENU
+   ================================= */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    left: -300px;
+
+    width: 280px;
+    height: 100vh;
+
+    padding: 100px 25px 30px;
+
+    background: #111722;
+
+    border-right: 1px solid #293142;
+
+    z-index: 9999;
+
+    transition: left 0.25s ease;
+
+    box-sizing: border-box;
+}
+
+.menu-open .side-menu {
+    left: 0;
+}
+
+
+.menu-title {
+    color: #7d8798;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+.side-menu a {
+    display: block;
+
+    padding: 18px 5px;
+
+    color: #f2f4f7;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    border-bottom: 1px solid #252d3a;
+}
+
+
+.side-menu a:hover {
+    color: var(--accent);
+}
+
+
+.menu-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 9998;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.25s;
+}
+
+
+.menu-open .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* TOMBOL MENU */
+
+.menu-btn,
+.search-btn {
+    cursor: pointer;
+}
