@@ -143,3 +143,94 @@
     }
 
 }
+/* ================================
+   GAMES PAGE
+   ================================ */
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.game-card {
+    overflow: hidden;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    transition: .2s;
+}
+
+.game-card:hover {
+    transform: translateY(-3px);
+    background: var(--card-hover);
+}
+
+.game-image {
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1a202c;
+
+    color: #70798a;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.game-info {
+    padding: 15px;
+}
+
+.game-info h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.game-info a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .games-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .game-image {
+        height: 120px;
+    }
+
+    .game-info {
+        padding: 12px;
+    }
+
+    .game-info h2 {
+        font-size: 15px;
+    }
+}
+
+
+/* HP KECIL */
+
+@media (max-width: 400px) {
+
+    .games-container {
+        grid-template-columns: 1fr;
+    }
+
+    .game-image {
+        height: 150px;
+    }
+}
